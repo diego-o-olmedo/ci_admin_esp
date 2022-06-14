@@ -33,7 +33,7 @@ const int resolution = 8; //Resolution 8, 10, 12, 15
 const String serial_number = "111";
 const String insert_password = "121212";
 const String get_data_password = "232323";
-const char*  server = "ioticosadmin.ml";
+const char*  server = "begonias.ml";
 
 //MQTT
 const char *mqtt_server = "ioticos.org";
@@ -98,7 +98,7 @@ void setup() {
 
   pinMode(WIFI_PIN,INPUT_PULLUP);
 
-  wifiManager.autoConnect("IoTicos Admin");
+  wifiManager.autoConnect("CI Admin");
   Serial.println("Conexión a WiFi exitosa!");
 
 
@@ -128,7 +128,7 @@ void loop() {
 //si el pulsador wifi esta en low, activamos el acces point de configuración
   if ( digitalRead(WIFI_PIN) == LOW ) {
     WiFiManager wifiManager;
-    wifiManager.startConfigPortal("IoTicos Admin");
+    wifiManager.startConfigPortal("CI Admin");
     Serial.println("Conectados a WiFi!!! :)");
   }
 
